@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Minified Performance</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/minified-styles.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Performance</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="baseline.html">Baseline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lazy.html">Lazy Loading</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="minified.html">Minification</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="combined.html">Combined</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="best-practices.html">Best Practices</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="display-4">Minified Performance</h1>
+        <p>This page uses minification, which reduces the size of CSS, JavaScript, and HTML files by removing unnecessary characters, comments, and whitespace.</p>
+        <p>Minification can significantly reduce the file size of code files, resulting in faster page load times and improved overall performance.</p>
+        <div id="metrics" class="mt-4">
+            <p>Load Time: <span id="load-time"></span> ms</p>
+            <p>Page Size: <span id="page-size"></span> KB</p>
+        </div>
+        
+        <div class="media-container">
+            <img src="images/1.jpg" alt="Minified Image 1" class="img-fluid"> 
+            <img src="images/2.jpg" alt="Minified Image 2" class="img-fluid"> 
+            <img src="images/3.jpg" alt="Minified Image 3" class="img-fluid">
+            
+            <video controls class="img-fluid">
+                <source src="videos/1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                <video controls class="img-fluid">
+                    <source src="videos/2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                </div>
+                
+                <script>document.addEventListener("DOMContentLoaded",
+                    function(){fetch("/api/data/minified").then(e=>e.json()).then(e=>{document.getElementById("load-time")
+                    .textContent=e.loadTime,document.getElementById("page-size")
+                    .textContent=e.pageSize})})
+                </script>
+            
+            </div>
+            
+            <script src="js/minified-script.min.js">
+
+            </script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
